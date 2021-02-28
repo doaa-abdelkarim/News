@@ -6,7 +6,7 @@
   <br/><b>MVVM pattern</b>,
   <br/><b>Room</b>,
   <br/><b>Retrofit</b>,
-  <br/><b>kotlin coroutines</b>,  
+  <br/><b>kotlin coroutines</b>,
   <br/><b>Repository pattern</b>, and
   <br/><b>Dependency injection</b> are used.
 </p>
