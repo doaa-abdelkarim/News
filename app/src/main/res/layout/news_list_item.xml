@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="article"
+            type="com.example.news.model.Article" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/text_view_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/shrikhand"
+                android:text="@{article.title}"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                tools:text="Title" />
+
+            <TextView
+                android:id="@+id/text_view_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_title"
+                android:layout_alignTop="@id/view"
+                android:layout_alignBottom="@id/view"
+                android:gravity="center"
+                date="@{article.publishedAt}"
+                android:textColor="@color/colorTextColorDate"
+                tools:text="Date" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/text_view_author"
+                android:layout_alignBottom="@id/text_view_author"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@id/text_view_date"
+                android:background="@color/colorViewBackground" />
+
+            <TextView
+                android:id="@+id/text_view_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_title"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/view"
+                android:text="@{article.author}"
+                android:textColor="@color/colorTextColorAuthor"
+                tools:text="Author" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@android:style/Widget.ProgressBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/image_view_news"
+                imageURL="@{article.urlToImage}"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/text_view_date"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/content_desc_article_photo" />
+
+            <TextView
+                android:id="@+id/text_view_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_view_news"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="serif"
+                android:maxLines="2"
+                android:text="@{article.description}"
+                android:textColor="@color/colorTextColorContent"
+                android:textSize="16sp"
+                tools:text="Description" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

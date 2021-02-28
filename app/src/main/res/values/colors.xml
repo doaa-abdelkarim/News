@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#BB1919</color>
+    <color name="colorPrimaryDark">#961414</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorTextColorDate">#7A7A7A</color>
+    <color name="colorViewBackground">#949494</color>
+    <color name="colorTextColorAuthor">#CF0404</color>
+    <color name="colorTextColorContent">#201F1F</color>
+    <color name="colorTabIndicator">#FFFFFF</color>
+    <color name="colorTabSelectedTextColor">#FFFFFF</color>
+    <color name="colorTabTextColor">#EF9A9A</color>
+    <color name="colorTextViewWebSiteBackground">#000000</color>
+    <color name="colorTextViewWebSiteTextColor">#FFFFFF</color>
+    <color name="colorMainActivityBackground">#E4E3E3</color>
+</resources>
